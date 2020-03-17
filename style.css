@@ -445,6 +445,7 @@ h1, h2, h3, h4 {
   .section-content-form .block-content {
     padding-top: 55px; }
     .section-content-form .block-content h3 {
+      font-weight: 500;
       color: #444444;
       margin-bottom: 10px; }
     .section-content-form .block-content p {

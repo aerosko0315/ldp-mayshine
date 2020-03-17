@@ -36,7 +36,7 @@
 		        				<li>&bull; Professional wholesale shredded paper supplier specialized for wholesalers / distributors / wedding companies / supermarkets / brand owners.</li>
 		        				<li>&bull; Offering wide range of custom shredded paper in fields for packaging and products protection.</li>
 		        			</ul>
-		        			<a href="#" class="btn-round btn-transparent btn-bordered-white scroll-down">Get New Catalog with Best Price</a>
+		        			<a href="#form-CTA" class="btn-round btn-transparent btn-bordered-white scroll-to">Get New Catalog with Best Price</a>
 		        		</div>
 		        	</div>
 	        	</div>
@@ -80,7 +80,7 @@
         			</div>
         			<div class="grid-col-7 grid-col-sm-12">
         				<div class="block-form pl-80">
-        					<div class="form-container">
+        					<div class="form-container" id="form-CTA">
 	        					<h3>Submit Your Enquiry & Get New Catalog</h3>
 	        					<p class="subtext">Our expert team will answer your inquiries within 12 hours</p>
 
@@ -188,7 +188,7 @@
                                 </div><!-- slider-wrap -->
                             </div>
                             <div class="slider-btn text-center">
-                                <a href="#" class="btn-round btn-default">Get A Quote</a>
+                                <a href="#form-CTA" class="btn-round btn-default scroll-to">Get A Quote</a>
                             </div><!-- slider-btn -->
                         </div><!-- right-slider -->
                     </div>
@@ -226,7 +226,7 @@
                     <h2>Unlimited Applications Of Crepe Paper</h2>
                 </div>
                 <div class="grid">
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/10-Shredded-Paper/S05-img/S05-img-01.jpg" alt="Shredded Paper Application">
@@ -236,7 +236,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/10-Shredded-Paper/S05-img/S05-img-02.jpg" alt="Shredded Paper Application">
@@ -246,7 +246,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/10-Shredded-Paper/S05-img/S05-img-03.jpg" alt="Shredded Paper Application">
@@ -256,7 +256,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/10-Shredded-Paper/S05-img/S05-img-04.jpg" alt="Paper Recreations and DIY">
@@ -306,7 +306,7 @@
                         <div class="col-left-content">
                             <h2>How to Cooperate with Us?</h2>
                             <p>Customization of shredded paper made easy.</p>
-                            <a href="#" class="btn-round btn-default">Send Your Design</a>
+                            <a href="#form-CTA" class="btn-round btn-default scroll-to">Send Your Design</a>
                         </div>
                     </div>
                     <div class="grid-col-8 grid-col-sm-12">
@@ -450,7 +450,7 @@
                                     <li>Guaranteed lead time</li>
                                     <li>Safe delivery</li>
                                 </ul>
-                                <a href="#" class="btn-round btn-white">Get Free Samples</a>
+                                <a href="#form-CTA" class="btn-round btn-white scroll-to">Get Free Samples</a>
             				</div>
             			</div>
             		</div>
@@ -524,11 +524,11 @@
                     $('.slider-wrap').slick('slickGoTo', parseInt(idx) );
                 });
 
-                $('.scroll-down').click(function(e){
+                $('.scroll-to').click(function(e){
                     e.preventDefault();
 
-                    var section = $(this).parents('section').next('section');
-                    var offset = section.offset().top;
+                    var id = $(this).attr('href');
+                    var offset = $(id).offset().top;
 
                     $('html, body').animate({ scrollTop: offset }, 600);
                 });

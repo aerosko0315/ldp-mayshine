@@ -36,7 +36,7 @@
 		        				<li>&bull; Professional tissue paper manufacturer specialized for wholesalers / distributors / wedding companies / supermarkets / brand owners.</li>
 		        				<li>&bull; Offering wide range of premium white tissue paper/ color tissue paper/ printed tissue paper in fields of gift wrapping & packaging, as well as party decorations.</li>
 		        			</ul>
-		        			<a href="#" class="btn-round btn-transparent btn-bordered-white scroll-down">Get New Catalog with Best Price</a>
+		        			<a href="#form-CTA" class="btn-round btn-transparent btn-bordered-white scroll-to">Get New Catalog with Best Price</a>
 		        		</div>
 		        	</div>
 	        	</div>
@@ -80,7 +80,7 @@
         			</div>
         			<div class="grid-col-7 grid-col-sm-12">
         				<div class="block-form pl-80">
-        					<div class="form-container">
+        					<div class="form-container" id="form-CTA">
 	        					<h3>Submit Your Enquiry & Get New Catalog</h3>
 	        					<p class="subtext">Our expert team will answer your inquiries within 12 hours</p>
 
@@ -98,7 +98,7 @@
 	        							<p>The Latest <strong>Product Catalog</strong> is available for download once your form is sent out!</p>
 	        						</div>
 	        						<div class="form-group">
-	        							<input type="submit" class="form-control-btn btn-round btn-default" value="Send">
+	        							<input type="submit" class="form-control-btn btn-round btn-default scroll-to" value="Send">
 	        						</div>
 	        						<div class="form-text">
 	        							<p class="form-text">Your details are kept strictly confidential with us.</p>
@@ -216,7 +216,7 @@
                                 </div><!-- slider-wrap -->
                             </div>
                             <div class="slider-btn text-center">
-                                <a href="#" class="btn-round btn-default">Get A Quote</a>
+                                <a href="#form-CTA" class="btn-round btn-default scroll-to">Get A Quote</a>
                             </div><!-- slider-btn -->
                         </div><!-- right-slider -->
                     </div>
@@ -254,7 +254,7 @@
                     <h2>Unlimited Applications Of Tissue Papers</h2>
                 </div>
                 <div class="grid">
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/01-Tissue-Paper/S05-img/Gift-wrapping.jpg" alt="Gift Wrapping">
@@ -264,7 +264,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/01-Tissue-Paper/S05-img/flower-wrapping.jpg" alt="Flower Wrapping">
@@ -274,7 +274,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/01-Tissue-Paper/S05-img/shoes-&-colothes-packaging.jpg" alt="Shoes & Colothes Packaging">
@@ -284,7 +284,7 @@
                             </div>
                         </div><!-- grid-item -->
                     </div>
-                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-12">
+                    <div class="grid-col-3 grid-col-sm-6 grid-col-xs-6">
                         <div class="grid-item">
                             <div class="image-wrap">
                                 <img src="img/01-Tissue-Paper/S05-img/decoration-and-DIY.jpg" alt="Decoration and DIY">
@@ -336,7 +336,7 @@
                         <div class="col-left-content">
                             <h2>How to Cooperate with Us?</h2>
                             <p>Customization of tissue paper made easy.</p>
-                            <a href="#" class="btn-round btn-default">Send Your Design</a>
+                            <a href="#form-CTA" class="btn-round btn-default scroll-to">Send Your Design</a>
                         </div>
                     </div>
                     <div class="grid-col-8 grid-col-sm-12">
@@ -480,7 +480,7 @@
                                     <li>Guaranteed lead time</li>
                                     <li>Safe delivery</li>
                                 </ul>
-                                <a href="#" class="btn-round btn-white">Get Free Samples</a>
+                                <a href="#form-CTA" class="btn-round btn-white scroll-to">Get Free Samples</a>
             				</div>
             			</div>
             		</div>
@@ -554,11 +554,11 @@
                     $('.slider-wrap').slick('slickGoTo', parseInt(idx) );
                 });
 
-                $('.scroll-down').click(function(e){
+                $('.scroll-to').click(function(e){
                     e.preventDefault();
 
-                    var section = $(this).parents('section').next('section');
-                    var offset = section.offset().top;
+                    var id = $(this).attr('href');
+                    var offset = $(id).offset().top;
 
                     $('html, body').animate({ scrollTop: offset }, 600);
                 });
